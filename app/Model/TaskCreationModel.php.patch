@@ -1,0 +1,12 @@
+--- /c/Users/Zdenko/Downloads/Organizations-final/Organizations-final/app/Model/TaskCreationModel.php.orig      2017-01-17 12:52:36.238359900 +0100
++++ /c/Users/Zdenko/Downloads/Organizations-final/Organizations-final/app/Model/TaskCreationModel.php   2017-01-17 12:51:49.257652200 +0100
+@@ -47,6 +47,8 @@
+             ));
+         }
+
++                               $this->hook->reference('model:task:creation:aftersave', $task_id);
++
+         return (int) $task_id;
+     }
+
+
